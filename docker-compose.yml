@@ -1,0 +1,28 @@
+version: "2.1"
+services:
+  lev_3:
+    build: level_3/
+    privileged: true
+    container_name: lev_3
+    ports:
+    - 5000:5000
+    expose:
+    - 5000
+    links:
+    - db:db
+  db:
+    build: level_3/mysql/
+    ports:
+    - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: a5tf9c0
+    expose:
+    - 3306
+  
+  lev_2:
+    build: level_2/
+    container_name: lev_2
+    ports:
+    - 8080:8080
+    expose:
+    - 8080

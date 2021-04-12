@@ -1,0 +1,5 @@
+=====================================================================
+LEVEL 2
+---------------------------------------------------------------------
+1. Is there any Apache Web Server running on the target?
+2. Can there be a module in metasploit for exploiting the running service?
